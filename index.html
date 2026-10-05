@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Electricity Usage Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Campus Electricity Usage Analyzer</h1>
+<p>Analyze classroom and laboratory electricity consumption.</p>
+</header>
+
+<main>
+<section class="card">
+<h2>Add Meter Reading</h2>
+<form id="readingForm">
+<input id="room" placeholder="Room / Lab name" required>
+<input id="date" type="date" required>
+<input id="reading" type="number" min="0" step="0.1" placeholder="Meter reading (kWh)" required>
+<button>Add Reading</button>
+</form>
+</section>
+
+<section class="summary">
+<div><strong id="total">0</strong><span>Total Consumption</span></div>
+<div><strong id="average">0</strong><span>Average Daily Usage</span></div>
+<div><strong id="highest">—</strong><span>Highest Usage</span></div>
+</section>
+
+<section class="card">
+<h2>Usage Analysis</h2>
+<div id="analysis"></div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
